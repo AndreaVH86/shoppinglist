@@ -1,0 +1,20 @@
+#header-cont-flex{
+    display: flex;
+    height: 15%;
+
+    background-color: #D793FF;
+
+}
+#main-cont-flex{
+    display: flex;
+    height: 75vh;
+
+    background-color: #AAFAED;
+  
+}
+#footer-cont-flex{
+    display: flex;
+    height: 10vh;
+
+    background-color: #FBF29E;
+}
