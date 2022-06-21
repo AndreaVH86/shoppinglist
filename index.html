@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,32 +11,87 @@
 
     <title> Shopping list </title>
 </head>
-<body>
-    <!-- Menu De Navegacion -->
-    <div id="header-cont-flex">
-        <h1>  My Shopping List </h1>
 
-    <!-- Links De Navegacion  -->
-    <div class="top-nav">
-       <i class="material-icons">more_vert</i>
-        <div id="links">
-            <a href=""> Inicio </a>
-            <a href=""> Super </a>
+<body>
+    <!-- Contiene El titulo y El Menu De Navegacion -->
+    <div id="header-cont-flex">
+        <h1> My Shopping List </h1>
+
+        <!-- Menu De Navegacion  -->
+        <div class="top-nav">
+            <i class="material-icons">more_vert</i>
+            <div id="links">
+                <a href=""> Inicio </a>
+                <a href=""> Super </a>
+            </div>
         </div>
 
     </div>
 
-    </div>
-     
     <div id="main-cont-flex">
-        
+
     </div>
+
+    <!-- Ventana Modal-->
+    <div class="modal">
+
+    <!-- Ventana Para Añadir Producto -->
+        <div class="nuevoprod">
+            
+                                                               
+            <label for="producto" class="label"  id="label-prod"> producto: </label>
+            <input type="text" id="input">
+
+
+            
+            <i class="material-icons" id="boton-menos"> remove_circle_outline</i>
+            <label for="cantidad"  id="cantidad"> cantidad </label>
+            <i class="material-icons" id="boton-mas" >add_circle_outline</i>
+            
+            
+
+            <label for="tienda" class="label" id="label-tienda"> Tienda: </label>
+            <select name="tienda" id="select-tienda" > 
+                <option value="mercadona"> Mercadona </option>
+                <option value="masymas"> Mas y mas </option>
+                <option value="lidl"> Lidl </option>
+                <option value="consum"> Consum </option>
+            </select>
+
+            <textarea name="" id="notas" cols="20" rows="10"> Notas </textarea>
+
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div id="footer-cont-flex">
-        <div class="add"> 
-            
+        <div class="add">
+            <i class="material-icons" style="font-size: 50px;">add_circle_outline</i>
         </div>
+
 
     </div>
 </body>
+
 </html>
