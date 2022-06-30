@@ -89,9 +89,14 @@ function apuntaProducto(){
 
         document.getElementById('lista').innerHTML += li
 
-        
     }
 
-      
-    
+}
+function recuperarArchivados(){
+    if(localStorage.getItem('li_productos')){
+
+        li_productos = localStorage.getItem('li_productos');//saco la lista del localStorage con get item y me lo da en cadena
+
+        li_productos = JSON.parse(li_productos)//parse coje la cadena y me la devuelce como objeto
+    }
 }
