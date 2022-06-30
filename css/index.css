@@ -7,35 +7,22 @@
 
 /* contiene el titulo y el menu de navegacion*/
 #header-cont-flex{
-    /* Posicionamiento*/
-    display: flex;
+   
 
     /* Dimensiones */
-    height: 5vh;
-    width: 80%;
+    height: 10vh;
+    width: 100%;
 
     /* Estilo */
-    background-color: #D793FF;
-
-}
-/* Menu De Navegacion*/
-.top-nav{
-    /* Posicionamiento*/
-    position: absolute;
-    right: 0px;
-
+    background: linear-gradient(to left,#33ccff, #ff99cc);
     
-    /* Dimensiones*/
-    width: 20%;
-    height: 5vh;
 
-    /* reglas para el contenido*/
-    display: flex;
+     /* Posicionamiento del contenido*/
+     display: flex;
     justify-content: center;
     align-items: center;
-    /*estilo*/
-    background-color: #D793FF;
 }
+
 /************************ ESTILO DEL MAIN Y SU CONTENIDO ************************/
 #main-cont-flex{
     /* Posicionamiento*/
@@ -45,8 +32,61 @@
     height: 85vh;
 
     /* Estilo*/
-    background-color: #AAFAED;
+    
   
+}
+.cont-ul{
+    /*dimensiones*/
+
+    width: 80%;
+    height: 80%;
+    
+   
+    /* Posicionamiento*/
+   
+    
+    
+
+    /* posicion contenido*/
+    margin: auto;
+}
+li{
+    /*Posicionamiento contenido*/
+    display: flex;
+    margin: 20px;
+    align-items: center;
+
+    /* Estilo*/
+     font-size: 25px;
+     background: #33ccff6e;
+     border-radius: 15px;
+}
+li label{
+    min-width: 40%;
+}
+span{
+    margin: auto;
+}
+.cajita-check{
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+}
+p{
+    margin: auto;
+    width: 50%;
+}
+
+#cont-notas{
+    /* Dimension */
+    width: 80%;
+    height: 50%;
+
+    /* Posicion */
+    margin: auto;
+}
+i{
+    margin: auto;
 }
 
 /*******************************  ESTILO DIV VENTANA MODAL Y SU CONTENIDO ***********************/
@@ -66,75 +106,139 @@
 
     /* Reglas Del Contenido */
 
-    display: none; /* para que se vea cambiar a disply flex*/
+    display: none; /* para que se vea cambiar a disply flex en js*/
     justify-content: center;
     align-items: center;
 
     /* Estilo */
-
     background-color:rgba(208, 250, 236, 0.5);
     z-index: 1;
 
 }
-/* contenedor modal*/
+ /*************************** CONTENEDOR MODAL AÑADIR PRODUCTO ***************************************/
 .nuevoprod{
-    display: flex;
-    flex-wrap: wrap;
+  
 
     /* Dimensiones */
     width: 80%;
-    height: 80%;
     padding: 10px;
 
     /* Estilo */
 
-    background-color: #FBF29E;
+    background: linear-gradient( to left,#33ccff, #ff99cc);
     z-index: 1;
-    
-}
+    border-radius: 15px;
 
     /* Posicionamiento del contenido*/
+    display: flex;
+    flex-wrap: wrap;
     
-#boton-mas,
-#boton-menos,
-#cantidad{
-    margin: auto;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #D793FF;
-    
-   
 }
+
+        
+
 .label{
     width: 100%;
-    
-    align-self: flex-end;
     font-size: 30px;
+    margin: 10px;
+    border-radius: 15px;
 }
 
 
-#input{
+.input{
     width: 100%;
+    font-size: x-large;
+    margin-top: 10px;
+    margin: 10px;
+    border-radius: 10px;
  
 
 }
+
+#boton-mas,
+#boton-menos{
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 50px;
+    
+}
+#cantidad{
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 50px;
+}
 #select-tienda{
     width: 100%;
-    font-size: 30px;
+    font-size: 25px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 #cantidad{
     font-size: 30px;
-    width: 50%
+    width: 50%;
+    margin: 10px;
     
 }
 #notas{
     width: 100%;
-    height: 20%;
+    height: 150px;
     font-size: 20px;
-    margin-top: 50px;
+    margin: 10px;
+    margin-bottom:20px;
+    border-radius: 10px;
+}
+#boton-aceptar, #boton-cancel{
+    margin: auto;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
+
+
+
+
+
+header{
+    width: 100%;
+    background-color: #33ccff;
+    font-size: 30px;
+} 
+
+
+.info{
+    /* Posicion */
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    /* Estilo */
+    background:  linear-gradient(to left,#33ccff, #ff99cc);
+    border-radius: 10px;
+    overflow: hidden;
+}
+p{
+    margin: 20px;
+    font-size: 20px;
+}
+#aceptar{
+    border-radius: 5px;
+  
+    
+    margin: auto;
+    margin-bottom: 20px;
+}
+#info-adicional{
+    width: 90%;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #ff99cc;
+}
+
+
+/*********************************** FOOTER **********************************************/
 /* Contiene el boton add para añadir producto*/
 #footer-cont-flex{
     /* Posicionamiento*/
@@ -142,30 +246,56 @@
     
     bottom: 0px;
     left: 0px;
-    display: flex;
-
+   
     /* Dimensione */
     height: 10vh;
     width: 100vw;
 
     /* Estilo */
-    background-color: #FBF29E;
+    background: linear-gradient(to left,#33ccff, #ff99cc);
+
+    /*Posicionamiento del contenido*/
+    display: flex;
+    justify-content: center;
+
+
 }
 .add{
     /* Posicionamiento*/
-    position: absolute;
-    right: 15px;
-    bottom: 7%;
+    position: relative;
+    bottom: 30%;
+    
     
     /* Dimensiones*/
-    width: 50px;
-    height: 50px;
-
-
-    
+    width: 60px;
+    height: 60px;
+   
     /* Estilo */
     border-radius: 50%;
-    background-color: #E089D9;
+    background-color: white;
+    /* Posicion contenido*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Menu De Navegacion*/
+.top-nav{
+    /* Posicionamiento*/
+    position: absolute;
+    right: 0px;
+
+    
+    /* Dimensiones*/
+    width: 20%;
+    height: 100%;
+
+    /* reglas para el contenido*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*estilo*/
+    background-color: linear-gradient(to right,#33ccff); 
+ 
 }
 
 
@@ -173,5 +303,14 @@
 /* Links Escondidos */
 #links{
     display: none;
+}
+
+@media screen and (max-width:350px) {
+    li{
+        width: 100%;
+    }
+    .cont-ul{
+        margin: 0px;
+    }
 }
 

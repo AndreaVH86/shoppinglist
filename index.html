@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="javascript/shoppinglist.js"></script>
+    <script src="javascript/tiendas.js"></script>
+    <script src="javascript/productos.js"></script>
 
 
     <title> Shopping list </title>
@@ -18,80 +21,135 @@
         <h1> My Shopping List </h1>
 
         <!-- Menu De Navegacion  -->
+
+    </div>
+
+    </div>
+
+    <div id="main-cont-flex">
+
+
+        <ul class="cont-ul" id="lista">
+
+            <li >
+                <input type="checkbox" name="" class="cajita-check">
+                <label for="">  </label>
+                <span> 2</span>
+                <i class="material-icons" onclick="muestraModal('modal-notas')">search</i>
+                <i class="material-icons">delete</i>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="cajita-check">
+                <label for="platanos"> Platanos</label>
+                <span> 3 </span>
+                <i class="material-icons">&#xe8b6;</i>
+                <i class="material-icons">&#xe872;</i>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="cajita-check">
+                <label for="mango"> Mango</label>
+                <span> 4 </span>
+                <i class="material-icons">&#xe8b6;</i>
+                <i class="material-icons">&#xe872;</i>
+            </li>
+            <li>
+                <input type="checkbox" name="aguacate" class="cajita-check">
+                <label for="aguacate"> Aguacate </label>
+                <span> 8</span>
+                <i class="material-icons">&#xe8b6;</i>
+                <i class="material-icons">&#xe872;</i>
+            </li>
+            <li>
+                <input type="checkbox" name="lechuga" class="cajita-check">
+                <label for="lechuga"> Lechuga </label>
+                <span> 6 </span>
+                <i class="material-icons">&#xe8b6;</i>
+                <i class="material-icons">&#xe872;</i>
+            </li>
+        </ul>
+    </div>
+
+
+    <!---------------------------********** Ventana Modal Añade Producto*************--------------------->
+    <div class="modal" id="modal">
+
+        <!-- Ventana Para Añadir Producto -->
+        <div class="nuevoprod">
+
+
+            <label for="producto" class="label" id="label-prod"> producto: </label>
+            <input type="text" id="nuevoProd" class="input">
+
+
+
+            <i class="material-icons" id="boton-menos"> remove_circle_outline</i>
+            <input type="number" name="cantidad" id="cantidad">
+            <i class="material-icons" id="boton-mas">add_circle_outline</i>
+
+
+
+            <label for="tienda" class="label" id="label-tienda"> Tienda: </label>
+            <select name="tienda" id="select-tienda"></select>
+
+
+            <script>
+                rellenaSelect(`select-tienda`, li_tiendas.tiendas);
+            </script>
+
+
+
+
+            <!--<option value="mercadona"> Mercadona </option>
+                <option value="masymas"> Mas y mas </option>
+                <option value="lidl"> Lidl </option>
+                <option value="consum"> Consum </option>
+            -->
+
+            <textarea name="" id="notas"> Notas </textarea>
+            <button id="boton-cancel" onclick="vaciaInput()"> Cancelar </button>
+            <button id="boton-aceptar" onclick="creaProducto()"> Aceptar </button>
+
+
+        </div>
+
+
+    </div>
+    <!--------------*****************MODAL MUESTRA NOTAS *****************---------------------->
+    <div class="modal" id="modal-notas">
+
+        <div class="info">
+            <header> lechuga </header>
+            <p> Cantidad: </p>
+            <span> 6 </span>
+            <p> Supermercado: </p>
+            <span> Mercadona </span>
+            <p>notas: </p>
+            <span id="info-adicional"> la lechuga que sea Iceberg y no de bolsa. que se estropea enseguida</span>
+
+            <button id="aceptar" onclick="escondeModal('modal-notas')">ok</button>
+        </div>
+
+    </div>
+
+
+    <!------------------------------    FOOTER ----------------------------------------->
+
+
+    <div id="footer-cont-flex">
+        <div class="add" onclick="muestraModal('modal')">
+            <i class="material-icons" style="font-size: 50px;">add_circle_outline</i>
+        </div>
         <div class="top-nav">
             <i class="material-icons">more_vert</i>
             <div id="links">
                 <a href=""> Inicio </a>
                 <a href=""> Super </a>
             </div>
-        </div>
-
-    </div>
-
-    <div id="main-cont-flex">
-
-    </div>
-
-    <!-- Ventana Modal-->
-    <div class="modal">
-
-    <!-- Ventana Para Añadir Producto -->
-        <div class="nuevoprod">
-            
-                                                               
-            <label for="producto" class="label"  id="label-prod"> producto: </label>
-            <input type="text" id="input">
-
-
-            
-            <i class="material-icons" id="boton-menos"> remove_circle_outline</i>
-            <label for="cantidad"  id="cantidad"> cantidad </label>
-            <i class="material-icons" id="boton-mas" >add_circle_outline</i>
-            
-            
-
-            <label for="tienda" class="label" id="label-tienda"> Tienda: </label>
-            <select name="tienda" id="select-tienda" > 
-                <option value="mercadona"> Mercadona </option>
-                <option value="masymas"> Mas y mas </option>
-                <option value="lidl"> Lidl </option>
-                <option value="consum"> Consum </option>
-            </select>
-
-            <textarea name="" id="notas" cols="20" rows="10"> Notas </textarea>
 
         </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-    <div id="footer-cont-flex">
-        <div class="add">
-            <i class="material-icons" style="font-size: 50px;">add_circle_outline</i>
-        </div>
-
-
-    </div>
 </body>
 
 </html>
